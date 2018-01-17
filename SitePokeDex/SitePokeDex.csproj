@@ -136,6 +136,7 @@
     <Compile Include="Page.Master.designer.cs">
       <DependentUpon>Page.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pokemon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
