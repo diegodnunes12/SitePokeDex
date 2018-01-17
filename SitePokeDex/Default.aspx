@@ -15,7 +15,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <h2>
-                                        <%# Eval("Nome") %>
+                                        <%# Eval("name") %>
                                     </h2>
                                 </div>
                             </div>
