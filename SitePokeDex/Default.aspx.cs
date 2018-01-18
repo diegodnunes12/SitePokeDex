@@ -54,8 +54,10 @@ namespace SitePokeDex
                 string json = new WebClient().DownloadString("https://pokeapi.co/api/v2/pokemon/");
                 RootObject datalist = JsonConvert.DeserializeObject<RootObject>(json);
 
-                this.RptListPokemon.DataSource = datalist.results;
-                this.RptListPokemon.DataBind();
+                this.ListPokemons.DataSource = datalist.results;
+                this.ListPokemons.DataBind();
+
+                
 
                 //List<Result> pokes = JsonConvert.DeserializeObject<List<Result>>(json);
                 //var pokes = (List<RootObject>)JsonConvert.DeserializeObject(json, json.GetType());
@@ -66,19 +68,38 @@ namespace SitePokeDex
                 //}
             }
         }
-    }
 
-    public class Result
-    {
-        public string url { get; set; }
-        public string name { get; set; }
-    }
+        protected void OnPagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
 
-    public class RootObject
-    {
-        public int count { get; set; }
-        public object previous { get; set; }
-        public Result [] results { get; set; }
-        public string next { get; set; }
+        {
+
+            try
+
+            {
+
+                (this.ListPokemons.FindControl("DataPager1") as DataPager).SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+
+
+
+                //this.BuscarVeiculos();
+
+            }
+
+            catch (Exception)
+
+            {
+
+
+
+                Response.Redirect("Falha.aspx", false);
+
+            }
+
+        }
     }
+    
+
+    
+
+    
 }

@@ -13,12 +13,12 @@ namespace SitePokeDex {
     public partial class Default {
         
         /// <summary>
-        /// RptListPokemon control.
+        /// ListPokemons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater RptListPokemon;
+        protected global::System.Web.UI.WebControls.ListView ListPokemons;
     }
 }
