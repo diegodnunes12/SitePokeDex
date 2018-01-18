@@ -25,6 +25,8 @@ namespace SitePokeDex
                 // composing the data of the Pokémon
                 this.LblName.Text = datalist.name.ToString() + " n° " + datalist.id;
                 this.ImgPoke.ImageUrl = datalist.sprites.front_default;
+                this.LblWeight.Text = datalist.weight.ToString();
+                this.LblBaseExperience.Text = datalist.base_experience.ToString();
 
                 foreach (var ab in datalist.abilities)
                 {
@@ -33,7 +35,12 @@ namespace SitePokeDex
 
                 foreach (var st in datalist.stats)
                 {
-                    this.LblAbilities.Text += st.stat.name + ": " + st.base_stat + " ";
+                    this.LblStats.Text += st.stat.name + ": " + st.base_stat + " ";
+                }
+
+                foreach (var mv in datalist.moves)
+                {
+                    this.LblMoves.Text += mv.move.name + " ";
                 }
 
 

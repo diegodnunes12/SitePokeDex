@@ -9,12 +9,27 @@
         </h1>
     <div>
         <h2>Abilities</h2>
-        <asp:Label ID="LblAbilities" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="LblAbilities" runat="server"></asp:Label>
 
     </div>
     <div>
         <h2>Stats</h2>
-        <asp:Label ID="LblStats" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="LblStats" runat="server"></asp:Label>
+
+    </div>
+    <div>
+        <h2>Weight</h2>
+        <asp:Label ID="LblWeight" runat="server"></asp:Label>
+
+    </div>
+    <div>
+        <h2>Moves</h2>
+        <asp:Label ID="LblMoves" runat="server"></asp:Label>
+
+    </div>
+    <div>
+        <h2>Base Experience</h2>
+        <asp:Label ID="LblBaseExperience" runat="server"></asp:Label>
 
     </div>
         
