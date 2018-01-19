@@ -1,2 +1,15 @@
-﻿body {
+﻿body 
+{
+    background-image:url(../images/bg-default.jpg);
+}
+
+.container
+{
+    background:#fff;
+    min-height:100vh;
+}
+.btn-lg
+{
+    width:150px;
+    margin-top:50px;
 }
