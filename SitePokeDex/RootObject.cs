@@ -147,4 +147,15 @@ namespace SitePokeDex
         public int base_experience { get; set; }
         public List<Type> types { get; set; }
     }
+
+
+    public class BestAttack
+    {
+        public int base_attack { get; set; }
+        public string name { get; set; }
+        public string image { get; set; }
+        public int base_experience { get; set; }
+        public int weight { get; set; }
+        public int totalStats { get; set; }
+    }
 }
