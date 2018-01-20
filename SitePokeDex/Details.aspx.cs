@@ -18,18 +18,14 @@ namespace SitePokeDex
                 string pokemonSelected = Request.QueryString["name"];
 
                 string json = new WebClient().DownloadString("https://pokeapi.co/api/v2/pokemon/" + pokemonSelected);
-                PokemonData datalist = JsonConvert.DeserializeObject<PokemonData>(json);
-
-                
+                PokemonData datalist = JsonConvert.DeserializeObject<PokemonData>(json);                
 
                 // composing the data of the Pokémon
                 this.LblName.Text = datalist.name.ToString() + " n° " + datalist.id;
                 this.ImgPoke.ImageUrl = datalist.sprites.front_default;
                 this.LblWeight.Text = datalist.weight.ToString();
                 this.LblBaseExperience.Text = datalist.base_experience.ToString();
-                this.LblHeight.Text = datalist.height.ToString();
-
-                
+                this.LblHeight.Text = datalist.height.ToString();                
 
                 foreach (var ab in datalist.abilities)
                 {

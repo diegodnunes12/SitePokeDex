@@ -98,6 +98,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BestAttacks.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="images\bg-default.jpg" />
     <Content Include="packages.config" />
@@ -128,6 +129,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BestAttacks.aspx.cs">
+      <DependentUpon>BestAttacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BestAttacks.aspx.designer.cs">
+      <DependentUpon>BestAttacks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
