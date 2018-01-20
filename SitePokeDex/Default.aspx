@@ -6,12 +6,15 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-xs-12 title-page text-center">
+                    <h1>Pokédex</h1>
+                </div>
                 <asp:ListView ID="ListPokemons" runat="server">
                     <ItemTemplate>
                         <div class="col-sm-3 text-center">
                             <div class="container-poke">
                             <a href='Details.aspx?name=<%# Eval("name") %>'>
-                                <h2>
+                                <h2 class="h3">
                                     <%# Eval("name") %>
                                 </h2>
                             </a>

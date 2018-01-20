@@ -34,10 +34,12 @@ namespace SitePokeDex
 
                 foreach (var st in datalist.stats)
                 {
+                    float percent = (st.base_stat * 100) / 400;
+
                     this.LtlStats.Text += "<div class='col-xs-6 text-right'>" + st.stat.name + ":</div >" + 
                         "<div class='col-xs-6'>" +
                             "<div class='progress'>" +
-                                "<div class='progress-bar' role='progressbar' aria-valuenow='" + st.base_stat + "' aria-valuemin='0' aria-valuemax='100' style='width:" + st.base_stat + "%;'>" +
+                                "<div class='progress-bar' role='progressbar' aria-valuenow='" + st.base_stat + "' aria-valuemin='0' aria-valuemax='500' style='width:" + percent + "%;'>" +
                                     st.base_stat + 
                                 " </div>" +
                             " </div>" +

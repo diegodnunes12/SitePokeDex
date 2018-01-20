@@ -101,6 +101,7 @@
     <Content Include="BestAttacks.aspx" />
     <Content Include="Details.aspx" />
     <Content Include="images\bg-default.jpg" />
+    <Content Include="images\logo.png" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

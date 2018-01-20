@@ -157,5 +157,11 @@ namespace SitePokeDex
         public int base_experience { get; set; }
         public int weight { get; set; }
         public int totalStats { get; set; }
+
+        public int base_hp { get; set; }
+        public int base_defense { get; set; }
+        public int base_spAt { get; set; }
+        public int base_spDf { get; set; }
+        public int base_speed { get; set; }
     }
 }
