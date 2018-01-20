@@ -13,9 +13,9 @@
 </div>--%>
     <div id="preload" class="preload"></div>
     <section>
-        <div class="container">
+        <div class="container container-information">
             <div class="row">
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12 text-center title-page">
                     <h1>We have selected the six Pokémon with the highest attack</h1>
                 </div>
                 <asp:ListView ID="ListPokemons" runat="server">

@@ -14,7 +14,7 @@ namespace SitePokeDex
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
+            {                
                 string pokemonSelected = Request.QueryString["name"];
 
                 string json = new WebClient().DownloadString("https://pokeapi.co/api/v2/pokemon/" + pokemonSelected);

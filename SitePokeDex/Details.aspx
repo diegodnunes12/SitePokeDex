@@ -3,16 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <ol class="breadcrumb">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Library</a></li>
-                      <li class="active">Data</li>
-                    </ol>
-                </div>                
-                <div class="col-md-12 text-center">
+        <div class="container container-information">
+            <div class="row">                               
+                <div class="col-md-12 text-center title-page">
                     <h1><asp:Image ID="ImgPoke" runat="server" /> <asp:Label ID="LblName" runat="server"></asp:Label></h1>
                 </div>
                 <div class="col-md-6 text-center">
