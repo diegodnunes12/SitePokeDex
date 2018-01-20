@@ -13,15 +13,6 @@ namespace SitePokeDex {
     public partial class Details {
         
         /// <summary>
-        /// LblName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblName;
-        
-        /// <summary>
         /// ImgPoke control.
         /// </summary>
         /// <remarks>
@@ -31,22 +22,22 @@ namespace SitePokeDex {
         protected global::System.Web.UI.WebControls.Image ImgPoke;
         
         /// <summary>
-        /// LblAbilities control.
+        /// LblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblAbilities;
+        protected global::System.Web.UI.WebControls.Label LblName;
         
         /// <summary>
-        /// LblStats control.
+        /// LblHeight control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblStats;
+        protected global::System.Web.UI.WebControls.Label LblHeight;
         
         /// <summary>
         /// LblWeight control.
@@ -58,13 +49,13 @@ namespace SitePokeDex {
         protected global::System.Web.UI.WebControls.Label LblWeight;
         
         /// <summary>
-        /// LblMoves control.
+        /// LblAbilities control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblMoves;
+        protected global::System.Web.UI.WebControls.Label LblAbilities;
         
         /// <summary>
         /// LblBaseExperience control.
@@ -74,5 +65,23 @@ namespace SitePokeDex {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblBaseExperience;
+        
+        /// <summary>
+        /// LtlStats control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LtlStats;
+        
+        /// <summary>
+        /// LblMoves control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LblMoves;
     }
 }

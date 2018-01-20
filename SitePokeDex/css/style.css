@@ -13,3 +13,18 @@
     width:150px;
     margin-top:50px;
 }
+.container-poke
+{
+    border:1px solid #ddd;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius:6px;
+}
+.container-poke:hover
+{
+    box-shadow: inset 0 0 0 2px #ddd;	
+}
+.profile div
+{
+    margin-bottom:30px;
+}

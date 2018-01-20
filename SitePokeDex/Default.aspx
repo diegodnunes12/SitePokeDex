@@ -8,12 +8,14 @@
             <div class="row">
                 <asp:ListView ID="ListPokemons" runat="server">
                     <ItemTemplate>
-                        <div class="col-sm-3">
+                        <div class="col-sm-3 text-center">
+                            <div class="container-poke">
                             <a href='Details.aspx?name=<%# Eval("name") %>'>
                                 <h2>
                                     <%# Eval("name") %>
                                 </h2>
                             </a>
+                            </div>
                         </div>
                     </ItemTemplate>
                 </asp:ListView>
