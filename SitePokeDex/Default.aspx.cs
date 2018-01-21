@@ -48,7 +48,7 @@ namespace SitePokeDex
         {
             string json = new WebClient().DownloadString(url);
             RootObject datalist = JsonConvert.DeserializeObject<RootObject>(json);
-
+            
             List<BestAttack> bestAttacks = new List<BestAttack>();
             foreach (Result item in datalist.results)
             {
@@ -116,23 +116,6 @@ namespace SitePokeDex
                 this.BtnPrev.CommandName = datalist.previous.ToString();
                 this.BtnPrev.Enabled = true;
             }
-
-            // Buscando os melhores pokes
-            //List<BestAttack> bestAttacks2 = new List<BestAttack>();
-            //foreach (Result item in datalist.results)
-            //{
-            //    string jsonPokemonData = new WebClient().DownloadString(url);
-            //    PokemonData datalistPokemonData = JsonConvert.DeserializeObject<PokemonData>(jsonPokemonData);
-
-            //    BestAttack bestAttack = new BestAttack();
-            //    bestAttack.name = item.name;
-            //    bestAttack.image = datalistPokemonData.sprites.front_default;
-                
-
-                
-
-            //    bestAttacks2.Add(bestAttack);
-            //}
 
             int attackSum = 0; int defenseSum = 0; int hpSum = 0; int spAtSum = 0; int spDfSum = 0; int speedSum = 0; int weightSum = 0; int experienceSum = 0;
             foreach (var item in bestAttacks.OrderByDescending(ba => ba.base_attack).Take(6))

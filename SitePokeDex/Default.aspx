@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SitePokeDex.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page.Master" AutoEventWireup="true" Async="true" CodeBehind="Default.aspx.cs" Inherits="SitePokeDex.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -33,6 +33,9 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-xs-12 title-page text-center">
+                    <h2>The six best attacked pokémons</h2>
+                </div>
                 <asp:ListView ID="ListBestPokemons" runat="server">
                     <ItemTemplate>
                         <div class="col-sm-12 text-center">
