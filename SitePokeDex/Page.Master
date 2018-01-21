@@ -36,7 +36,8 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="Default.aspx">Home <span class="sr-only">(current)</span></a></li>
-                            <li><a href="BestAttacks.aspx">Best Attacks</a></li>                            
+                            <li><a href="BestAttacks.aspx">Best Attacks</a></li>
+                             <li><a href="Order.aspx">Order By</a></li>                            
                         </ul>
                     </div>
                         <div class="clearfix"></div>

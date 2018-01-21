@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json;
 using System.Runtime.Serialization;
+using PokeAPI;
 
 namespace SitePokeDex
 {
@@ -44,15 +45,15 @@ namespace SitePokeDex
         /// Busca os pokemons da API
         /// </summary>
         /// <param name="url"></param>
-        protected void GetPokemons(string url)
+        protected async void GetPokemons(string url)
         {
-            string json = new WebClient().DownloadString(url);
+            string json = await new WebClient().DownloadStringTaskAsync(url);
             RootObject datalist = JsonConvert.DeserializeObject<RootObject>(json);
             
             List<BestAttack> bestAttacks = new List<BestAttack>();
             foreach (Result item in datalist.results)
             {
-                string jsonPokemonData = new WebClient().DownloadString(item.url);
+                string jsonPokemonData = await new WebClient().DownloadStringTaskAsync(item.url);
                 PokemonData datalistPokemonData = JsonConvert.DeserializeObject<PokemonData>(jsonPokemonData);
 
                 BestAttack bestAttack = new BestAttack();
@@ -146,6 +147,6 @@ namespace SitePokeDex
             this.ListBestPokemons.DataSource = bestAttacks.OrderByDescending(ba => ba.base_attack).Take(6);
             this.ListBestPokemons.DataBind();
 
-        }
+        }        
     }
 }

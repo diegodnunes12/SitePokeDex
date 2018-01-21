@@ -18,7 +18,7 @@ namespace SitePokeDex
         {
             if (!IsPostBack)
             {
-                string json = new WebClient().DownloadString("https://pokeapi.co/api/v2/pokemon/?limit=10&offset=0");
+                string json = new WebClient().DownloadString("https://pokeapi.co/api/v2/pokemon/?limit=949&offset=0");
                 RootObject datalist = JsonConvert.DeserializeObject<RootObject>(json);
 
                 List<BestAttack> bestAttacks = new List<BestAttack>();

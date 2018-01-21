@@ -163,5 +163,7 @@ namespace SitePokeDex
         public int base_spAt { get; set; }
         public int base_spDf { get; set; }
         public int base_speed { get; set; }
+
+        public int id { get; set; }
     }
 }
