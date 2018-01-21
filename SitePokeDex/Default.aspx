@@ -32,7 +32,14 @@
                     <asp:Button ID="BtnNext" runat="server"  Text="Next" CssClass="btn btn-primary btn-lg" OnClick="BtnNext_Click" />
                 </div>
             </div>
-            <div class="row">
+            <%--<div class="row">
+                <div class="col-sm-12 text-center">
+                    <asp:Button ID="BtnLoadBestAttack" runat="server" Text="best attacks loaded" CssClass="btn btn-primary btn-lg" OnClick="BtnLoadBestAttack_Click" />
+                </div>
+            </div>--%>
+
+            <asp:Panel ID="PnlBestAttack" runat="server" Visible="false">
+                <div class="row">
                 <div class="col-xs-12 title-page text-center">
                     <h2>The six best attacked pokémons</h2>
                 </div>
@@ -73,6 +80,7 @@
                     </ItemTemplate>
                 </asp:ListView>
             </div>
+            </asp:Panel>            
         </div>
     </section>
 </asp:Content>
