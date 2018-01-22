@@ -18,10 +18,7 @@ namespace SitePokeDex
         public string url { get; set; }
         public string name { get; set; }
     }
-
-
-
-
+    
     public class Form
     {
         public string url { get; set; }

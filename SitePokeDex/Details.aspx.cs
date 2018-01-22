@@ -25,12 +25,22 @@ namespace SitePokeDex
                 this.ImgPoke.ImageUrl = datalist.sprites.front_default;
                 this.LblWeight.Text = datalist.weight.ToString();
                 this.LblBaseExperience.Text = datalist.base_experience.ToString();
-                this.LblHeight.Text = datalist.height.ToString();                
+                this.LblHeight.Text = datalist.height.ToString();
 
+                string ability = "";
                 foreach (var ab in datalist.abilities)
                 {
-                    this.LblAbilities.Text += ab.ability.name + ", ";
+                    ability += ab.ability.name + ", ";
                 }
+                ability = ability.Remove(ability.Length - 2);
+                this.LblAbilities.Text = ability;
+
+                string type = "";
+                foreach (var tp in datalist.types)
+                {
+                    type += tp.type.name + ", ";
+                }
+                this.LblType.Text = type.Remove(type.Length - 2);
 
                 foreach (var st in datalist.stats)
                 {
@@ -46,10 +56,13 @@ namespace SitePokeDex
                          " </div>";                    
                 }
 
+                string move = "<ul class='list-group'>";
                 foreach (var mv in datalist.moves)
                 {
-                    this.LblMoves.Text += "<div class='col-md-3'>" + mv.move.name + "</div>";
+                    move += "<div class='col-md-3 moves'><li class='list-group-item'>" + mv.move.name + "</li></div>";
                 }
+                move += "</ul>";
+                this.LblMoves.Text = move;
             }
         }
     }

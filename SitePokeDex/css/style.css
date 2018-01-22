@@ -58,6 +58,16 @@ a:hover
 {
     padding:2px 15px;
 }
+.moves
+{
+    margin-top:10px;
+}
+footer
+{
+    background:#000;
+    padding:10px 0;
+    color:#fff;
+}
 
 
 .loader {

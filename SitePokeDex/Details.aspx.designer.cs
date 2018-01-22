@@ -49,6 +49,15 @@ namespace SitePokeDex {
         protected global::System.Web.UI.WebControls.Label LblWeight;
         
         /// <summary>
+        /// LblType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblType;
+        
+        /// <summary>
         /// LblAbilities control.
         /// </summary>
         /// <remarks>

@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id="preload" class="preload"></div>
     <section>
         <div class="container container-information">
             <div class="row">                               
@@ -20,6 +21,10 @@
                             <div>
                                 <b>Weight:</b> 
                                 <asp:Label ID="LblWeight" runat="server"></asp:Label>
+                            </div>
+                            <div>
+                                <b>Types:</b> 
+                                <asp:Label ID="LblType" runat="server"></asp:Label>
                             </div>
                         </div>
                           <div class="col-sm-6 profile">

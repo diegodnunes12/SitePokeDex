@@ -2,15 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--<div class='loader'>
-  <div class='loader-container'>
-    <h3><b>Please wait a moment while we are preparing the content !</b></h3>
-    <div class='progress progress-striped active'>
-      <div class='progress-bar progress-bar-color' id='bar' role='progressbar' style='width: 0%;'></div>
-    </div>
-  </div>
-</div>--%>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">   
     <div id="preload" class="preload"></div>
     <section>
         <div class="container container-information">
