@@ -15,19 +15,22 @@ namespace SitePokeDex
         {
             if (!IsPostBack)
             {
+                // Buscando todos Pokémons
                 this.GetPokemons();
             }
         }        
 
         /// <summary>
-        /// 
+        /// Buscando todos os Pokémons
         /// </summary>
         protected async void GetPokemons()
         {
+            // Recebe o Json e converte ele em um objeto RootObject
             string json = await new WebClient().DownloadStringTaskAsync("https://pokeapi.co/api/v2/pokemon/?limit=949&offset=0");
             RootObject datalist = JsonConvert.DeserializeObject<RootObject>(json);
 
             List<BestAttack> bestAttacks = new List<BestAttack>();
+            // Apresenta a imagem e o nome do Pokémon
             foreach (Result item in datalist.results)
             {
                 int id = this.GetIdByUrl(item.url);
@@ -40,6 +43,7 @@ namespace SitePokeDex
                 bestAttacks.Add(bestAttack);
             }
 
+            // Verifica a ordem seleciona pelo usuário
             switch (this.DdlOrder.SelectedValue)
             {
                 case "1":
@@ -63,7 +67,7 @@ namespace SitePokeDex
         }
 
         /// <summary>
-        /// 
+        /// Executa a ordenação da Lista
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

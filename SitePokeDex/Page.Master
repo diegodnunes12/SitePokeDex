@@ -10,6 +10,7 @@
 
     <title>PokéDex</title>
 
+    <!-- css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -19,6 +20,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <!-- Menu -->
             <nav class="navbar navbar-inverse navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="container">
@@ -49,20 +51,23 @@
             <div class="clearfix"></div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <!-- Rodapé -->
             <footer>
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-right">
-                            <asp:Label ID="LblYear" runat="server"></asp:Label> By Diego Nunes
+                            <asp:Label ID="LblYear" runat="server"></asp:Label>
+                            By Diego Nunes
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
     </form>
-
+    <!-- js -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!-- js preload -->
     <script>
         $(document).ready(function () {
             setTimeout('$("#preload").fadeOut(100)', 1500);

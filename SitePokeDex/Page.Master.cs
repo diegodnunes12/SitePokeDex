@@ -13,6 +13,7 @@ namespace SitePokeDex
         {
             if (!IsPostBack)
             {
+                // Apresenta o ano corrente
                 this.LblYear.Text = DateTime.Now.Year.ToString();
             }
         }

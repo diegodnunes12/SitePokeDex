@@ -1,11 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace SitePokeDex
 {
@@ -14,9 +9,11 @@ namespace SitePokeDex
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {                
+            {
+                // Recuperando o nome do Pokémon selecionado            
                 string pokemonSelected = Request.QueryString["name"];
 
+                // Search the Pokémon data
                 string json = new WebClient().DownloadString("https://pokeapi.co/api/v2/pokemon/" + pokemonSelected);
                 PokemonData datalist = JsonConvert.DeserializeObject<PokemonData>(json);                
 
@@ -27,6 +24,7 @@ namespace SitePokeDex
                 this.LblBaseExperience.Text = datalist.base_experience.ToString();
                 this.LblHeight.Text = datalist.height.ToString();
 
+                // composing abilities
                 string ability = "";
                 foreach (var ab in datalist.abilities)
                 {
@@ -35,6 +33,7 @@ namespace SitePokeDex
                 ability = ability.Remove(ability.Length - 2);
                 this.LblAbilities.Text = ability;
 
+                // composing type
                 string type = "";
                 foreach (var tp in datalist.types)
                 {
@@ -42,6 +41,7 @@ namespace SitePokeDex
                 }
                 this.LblType.Text = type.Remove(type.Length - 2);
 
+                // composing stats
                 foreach (var st in datalist.stats)
                 {
                     float percent = (st.base_stat * 100) / 400;
@@ -56,6 +56,7 @@ namespace SitePokeDex
                          " </div>";                    
                 }
 
+                // composing moves
                 string move = "<ul class='list-group'>";
                 foreach (var mv in datalist.moves)
                 {

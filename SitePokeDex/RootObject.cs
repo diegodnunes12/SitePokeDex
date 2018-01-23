@@ -5,6 +5,9 @@ using System.Web;
 
 namespace SitePokeDex
 {
+    /// <summary>
+    /// Classes utilizadas para desserializar Json em objetos
+    /// </summary>
     public class RootObject
     {
         public int count { get; set; }
