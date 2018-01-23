@@ -162,7 +162,18 @@ namespace SitePokeDex
                 bestAttack.weight = int.Parse(ListBestPokemons.DataKeys[i].Values["weight"].ToString());
                 bestAttack.totalStats = int.Parse(ListBestPokemons.DataKeys[i].Values["totalStats"].ToString());
 
-                bestAttacks.Add(bestAttack);
+                bool verification = false;
+                foreach (var item in bestAttacks)
+                {
+                    if (item.name == bestAttack.name)
+                    {
+                        verification = true;
+                    }
+                }
+                if (verification == false)
+                {
+                    bestAttacks.Add(bestAttack);
+                }                
             }
 
             // Somando os dados para o quadro de resumo
